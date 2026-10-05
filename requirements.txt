@@ -1,0 +1,8 @@
+# HTTP client
+requests
+
+# Audio encoding / decoding
+soundfile
+numpy
+
+python-dotenv
