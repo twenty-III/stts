@@ -1,4 +1,7 @@
 import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dotenv import load_dotenv
 
@@ -11,7 +14,9 @@ API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
 def text_to_speech_example():
     tts = KokoroTTS(api_key=API_KEY)
-    result = tts.synthesize("Hello! This is a test of the speech synthesis system.")
+    result = tts.synthesize(
+        "chandu ke chacha ne chadu ki chachi ko chandi ke chammach se chatni chatai"
+    )
     tts.save(result, "output.wav")
     print(
         f"Saved audio -> output.wav ({len(result.audio)} samples @ {result.sample_rate} Hz)"

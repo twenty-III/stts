@@ -62,3 +62,6 @@ output.wav
 # OS files
 .DS_Store
 Thumbs.db
+
+# audio testing files
+*.wav
